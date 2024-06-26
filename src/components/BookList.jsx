@@ -1,4 +1,4 @@
-import { Alert, Container, Form, InputGroup, Row } from "react-bootstrap";
+import { Container, Form, InputGroup, Row } from "react-bootstrap";
 import SingleBook from "./SingleBook";
 import { Component } from "react";
 
@@ -15,7 +15,7 @@ class BookList extends Component {
         </InputGroup>
 
         {this.state.userBook ? (
-          <Row className="">
+          <Row>
             {this.props.books
               .filter((book) => book.title.toLowerCase().includes(this.state.userBook))
               .map((book) => (
@@ -23,7 +23,7 @@ class BookList extends Component {
               ))}
           </Row>
         ) : (
-          <Row className="">
+          <Row>
             {this.props.books.map((book) => (
               <SingleBook key={book.asin} img={book.img} title={book.title} price={book.price} />
             ))}
