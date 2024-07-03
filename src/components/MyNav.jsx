@@ -1,10 +1,5 @@
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import logo from "../logo.svg";
-import fantasyBooks from "../data/fantasy.json";
-import historyBooks from "../data/history.json";
-import horrorBooks from "../data/horror.json";
-import romanceBooks from "../data/romance.json";
-import scifiBookss from "../data/scifi.json";
 
 const MyNav = (props) => {
   return (
@@ -21,19 +16,19 @@ const MyNav = (props) => {
             <Nav.Link href="#link">Link</Nav.Link>
             <Nav.Link href="#browse">Browse</Nav.Link>
             <NavDropdown title="Category" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1" onClick={() => props.selectCategory(fantasyBooks)}>
+              <NavDropdown.Item href="#action/3.1" onClick={() => props.selectCategory("fantasyBooks")}>
                 Fantasy
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2" onClick={() => props.selectCategory(historyBooks)}>
+              <NavDropdown.Item href="#action/3.2" onClick={() => props.selectCategory("historyBooks")}>
                 History
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3" onClick={() => props.selectCategory(horrorBooks)}>
+              <NavDropdown.Item href="#action/3.3" onClick={() => props.selectCategory("horrorBooks")}>
                 Horror
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4" onClick={() => props.selectCategory(romanceBooks)}>
+              <NavDropdown.Item href="#action/3.4" onClick={() => props.selectCategory("romanceBooks")}>
                 Romance
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.5" onClick={() => props.selectCategory(scifiBookss)}>
+              <NavDropdown.Item href="#action/3.5" onClick={() => props.selectCategory("scifiBooks")}>
                 Scifi
               </NavDropdown.Item>
             </NavDropdown>

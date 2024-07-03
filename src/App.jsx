@@ -10,16 +10,34 @@ import fantasyBooks from "./data/fantasy.json";
 import historyBooks from "./data/history.json";
 import horrorBooks from "./data/horror.json";
 import romanceBooks from "./data/romance.json";
-import scifiBookss from "./data/scifi.json";
+import scifiBooks from "./data/scifi.json";
 // console.log(fantasyBooks);
 
 class App extends Component {
   state = {
-    categorySelected: scifiBookss,
+    categorySelected: scifiBooks,
   };
 
-  selectCategory = (newCategory) => {
-    this.setState({ categorySelected: newCategory });
+  selectCategory = (arrayCategory) => {
+    switch (arrayCategory) {
+      case "fantasyBooks":
+        this.setState({ categorySelected: fantasyBooks });
+        break;
+      case "historyBooks":
+        this.setState({ categorySelected: historyBooks });
+        break;
+      case "horrorBooks":
+        this.setState({ categorySelected: horrorBooks });
+        break;
+      case "romanceBooks":
+        this.setState({ categorySelected: romanceBooks });
+        break;
+      case "scifiBooks":
+        this.setState({ categorySelected: scifiBooks });
+        break;
+      default:
+        break;
+    }
   };
 
   render() {
